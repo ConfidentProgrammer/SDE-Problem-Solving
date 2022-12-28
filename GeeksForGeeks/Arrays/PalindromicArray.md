@@ -3,25 +3,19 @@
 ## https://practice.geeksforgeeks.org/problems/palindromic-array-1587115620/1?page=1&category[]=Arrays&category[]=OOP&sortBy=difficulty
 
 ## solution
-
-public static int palinArray(int[] a, int n)
+	public static int palinArray(int[] a, int n)
            {
-                  //add code here.
-                  int temp = 0;
-                  for(int i = 0 ; i<n ; ++i) {
-                      if(!isPalin(a[i])) {
-                          break;
-                      }else {
-                          temp+=1;
-                      }
-                     
+               
+                for(int i = 0 ; i<n ; ++i) {
+                   boolean ans = isPalin(a[i]);
+                   
+                   if(!ans) {
+                       return 0;
+                   }
                   }
                   
-                  if(temp == n) {
-                      return 1;
-                  }
-                  
-                  return 0;
+                 return 1;
+                
            }
            
     public static boolean isPalin(int n){
